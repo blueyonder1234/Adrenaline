@@ -11,7 +11,7 @@ endif()
 project(adrenaline_user)
 include("${VITASDK}/share/vita.cmake" REQUIRED)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,-q -Wall -O3 -nostartfiles")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wl,-q -Wall -O3 -nostartfiles -fno-lto")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti -fno-exceptions")
 
 # Builds
@@ -96,7 +96,7 @@ vita_create_self(adrenaline_user.suprx adrenaline_user CONFIG exports.yml UNSAFE
 vita_create_stubs(stubs adrenaline_user ${CMAKE_SOURCE_DIR}/exports.yml)
 
 add_custom_target(copy
-  COMMAND cp adrenaline_user.suprx H:/app/PSPEMUCFW/sce_module/adrenaline_user.suprx
+  COMMAND cp adrenaline_user.suprx F:/app/PSPEMUCFW/sce_module/adrenaline_user.suprx
   DEPENDS adrenaline_user.suprx
 )
 

@@ -42,6 +42,15 @@ For 6.61 Adrenaline-6.4 or higher, you can use the `System Update` in the XMB to
 Changelog
 ---------
 
+### Changelog v6.9
+- Added support for native resolution patches.
+
+### Changelog v6.8
+- Added sharp bilinear without scanlines filter. Thanks to rsn8887.
+- Fixed PS1 slowdowns. Thanks to rsn8887.
+- Fixed compatiblity with h-encore 2.0.
+- Fixed compatiblity with udcd_uvc.skprx plugin.
+
 ### Changelog v6.7
 - Added support for PS1 multiplayer on PS Vita using an upcoming DS3/DS4 plugin.
 
